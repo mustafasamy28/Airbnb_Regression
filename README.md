@@ -54,19 +54,35 @@ The following transformations were applied:
 
 3. **Models Tested**:
    - Linear Regression
+<<<<<<< HEAD
    - Decision Tree Regressor
    - Random Forest Regressor
    - Gradient Boosting Regressor
+=======
+   - Ridge Regression
+   - Lasso Regression
+   - ElasticNet Regression
+   - K-Nearest Neighbors
+   - Decision Tree Regressor (CART)
+   - Random Forest Regressor
+   - Gradient Boosting Regressor
+   - XGBoost Regressor
+>>>>>>> 266ac8efa41cd5acd1bc16337a870f180864750f
 
 4. **Evaluation Metrics**:
    - MAE (Mean Absolute Error)
    - RMSE (Root Mean Squared Error)
    - R² Score
+<<<<<<< HEAD
+=======
+   - Execution Time
+>>>>>>> 266ac8efa41cd5acd1bc16337a870f180864750f
 
 ---
 
 ## 🏆 Model Selection & Results
 
+<<<<<<< HEAD
 After testing several models, the **Random Forest Regressor** provided the best performance:
 
 | Metric | Value |
@@ -74,6 +90,26 @@ After testing several models, the **Random Forest Regressor** provided the best 
 | MAE    | 21.4  |
 | RMSE   | 34.2  |
 | R²     | 0.89  |
+=======
+After testing several regression models, **XGBoost Regressor** outperformed all others in both accuracy and efficiency:
+
+| Model        | RMSE   | R² Score | MAE    | MSE    | Time (s) |
+|--------------|--------|----------|--------|--------|----------|
+| **XGBoost**  | **0.1068** | **0.9545** | 0.0429 | **0.0182** | 9.76     |
+| RandomForest | 0.1066 | 0.9506   | **0.0272** | 0.0198 | 67.17    |
+| CART         | 0.1472 | 0.9382   | 0.0331 | 0.0248 | 1.34     |
+| GBM          | 0.1436 | 0.9325   | 0.0873 | 0.027  | 27.69    |
+| Linear (LR)  | 0.1754 | 0.9084   | 0.1012 | 0.0367 | 0.22     |
+| Ridge        | 0.1754 | 0.9084   | 0.1012 | 0.0367 | 0.14     |
+| KNN          | 0.3456 | 0.712    | 0.2297 | 0.1154 | 1.15     |
+| Lasso        | 0.6501 | -0.0004  | 0.494  | 0.4009 | 0.13     |
+| ElasticNet   | 0.6501 | -0.0004  | 0.494  | 0.4009 | 0.17     |
+
+> 📌 **Final Model Chosen**: `XGBoost Regressor`  
+> 🎯 **Best R² Score**: `0.9545`  
+> ⚡ **RMSE**: `0.1068`  
+> ⏱️ **Execution Time**: `9.76 seconds`
+>>>>>>> 266ac8efa41cd5acd1bc16337a870f180864750f
 
 ---
 
